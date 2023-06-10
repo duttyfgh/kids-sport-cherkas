@@ -18,8 +18,8 @@ function App() {
         <Header />
         <div className='mainContent'>
             <Routes>
-              <Route path='/' element={<Navigate to={'/cool-site-for-sasha'} />} />
-              <Route path='/cool-site-for-sasha' element={<StartPage />} />
+              <Route path='/' element={<Navigate to={'/kids-sport-cherkas'} />} />
+              <Route path='/kids-sport-cherkas' element={<StartPage />} />
               <Route path='/news' element={<News />} />
               <Route path='/football' element={<Football />} />
               <Route path='/basketball' element={<Basketball />} />
