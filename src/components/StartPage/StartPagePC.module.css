@@ -1,0 +1,111 @@
+.actualNews {
+    display: flex;
+    justify-content: start;
+    height: 470px;
+    margin-top: 40px;
+    display: flex;
+    margin-left: 10px;
+}
+
+.litleBlock {
+    display: flex;
+    flex-direction: column;
+    height: 460px;
+
+}
+
+.litleItem {
+    margin-top: 10px;
+    width: 545px;
+    height: 260px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.litleBlock img {
+    height: 330px;
+    width: 100%;
+}
+
+.bigBlock img:hover,
+.litleBlock img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.bigBlock {
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bigBlock img,
+.litleBlock img {
+    transition: transform 0.6s ease
+}
+
+.blockText * {
+    color: aliceblue;
+}
+
+.blockText {
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    padding: 10px;
+    margin: 15px;
+    background-color: #00000024;
+    cursor: pointer;
+}
+
+.bigBlock .blockText span {
+    font-size: 25px;
+    text-align: left;
+}
+
+.litleBlock .blockText span {
+    font-size: 18px;
+    text-align: left;
+}
+
+.separateBlock {
+    height: 450px;
+    width: 320px;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.separateBlock img {
+    height: 450px;
+    transition: transform 0.6s ease
+
+}
+
+.separateBlock .blockText {
+    bottom: 10px;
+}
+
+.separateBlock img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.verticalBlock {
+    display: flex;
+    flex-direction: column;
+  }

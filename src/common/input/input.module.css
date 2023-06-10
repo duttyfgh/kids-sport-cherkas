@@ -1,0 +1,30 @@
+.inputShell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #cf3e3e;
+    height: 60px;
+    margin: 20px;
+
+    border-radius: 14px;
+    box-shadow: 2px 2px 14px rgba(0, 0, 0, 0.445);
+}
+
+.inputShell input {
+    width: 96%;
+    height: 50px;
+    margin-left: 10px;
+    background: transparent;
+    font-size: 22px;
+}
+
+.inputShell input::placeholder {
+    color: #9c2727;
+}
+
+.inputShell .search {
+    margin-right: 20px;
+    font-size: 22px;
+    cursor: pointer;
+}
