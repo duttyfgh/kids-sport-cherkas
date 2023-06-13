@@ -16,8 +16,8 @@ interface NewsComponentProps {
             year: string;
         };
         type: string | null
-        }
     }
+}
 
 
 const NewsComponent = (props: NewsComponentProps) => {
@@ -27,8 +27,8 @@ const NewsComponent = (props: NewsComponentProps) => {
         <div className={classes.actualFirst}>
             <img src={newsImg} alt="..." />
             <div className={classes.blockText}>
-                <textarea readOnly value={name}/>
-                <span style={{fontSize: '14px'}}>{`${dateNumber} ${month} ${year}`}</span>
+                <textarea readOnly value={name} />
+                <span style={{ fontSize: '14px' }}>{`${dateNumber} ${month} ${year}`}</span>
             </div>
         </div>
     )
@@ -39,10 +39,10 @@ const StartPageLTAndTablet = () => {
     console.log(actualNews)
     return (
         <div className={classes.actualNews}>
-        {actualNews.slice(2, 5).reverse().map(n => (
-            <NewsComponent news={n} key={n.newsImg} />
-        ))}
-    </div>
+            {actualNews.slice(-3).reverse().map(n => (
+                <NewsComponent news={n} key={n.newsImg} />
+            ))}
+        </div>
     )
 }
 

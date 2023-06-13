@@ -54,6 +54,7 @@
     color: white;
     background-color: transparent;
     height: auto;
+    overflow: hidden;
 
 }
 
