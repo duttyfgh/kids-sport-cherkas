@@ -47,7 +47,6 @@ const StartPageLTAndTablet = () => {
     )
 }
 
-
 const StartPage = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth)
 

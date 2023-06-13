@@ -2,7 +2,7 @@ import { faSquarePlus, faTrashAlt } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ChangeEvent, useState } from 'react'
 import { useActions } from '../../../hooks/actions'
-import classes from './EditSitePage.module.css'
+import classes from './editSitePage.module.css'
 
 const EditSitePage = () => {
   //photo and drop down panel
@@ -189,7 +189,7 @@ const EditSitePage = () => {
           </div>
           <div>
             <p className={classes.addTypeNewsText}>Додати тип новини:</p>
-            <select className={classes.dropDownPanel} onChange={handleSelectChange}>
+            <select className={classes.dropDownPanel} value={selectedValue} onChange={handleSelectChange}>
               <option> </option>
               <option>Футбол</option>
               <option>Баскетбол</option>
