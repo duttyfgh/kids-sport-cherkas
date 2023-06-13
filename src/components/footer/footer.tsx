@@ -1,6 +1,7 @@
 import classes from './footer.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { Link } from 'react-router-dom'
 
 
 const Footer = () => {
@@ -15,9 +16,9 @@ const Footer = () => {
             <div className={classes.autorSite}>Цей сайт створено
                 <a href="https://www.instagram.com/dutyfgh/" target={'_blank'}>
                     <FontAwesomeIcon icon={faInstagram} className={classes.inst} /></a></div>
-            <div>
+            <Link to='/admin-page' className={classes.version}>
                 0.8v
-            </div>
+            </Link>
         </footer>
 
     )

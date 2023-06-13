@@ -1,9 +1,8 @@
 .actualNews {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     height: 470px;
     margin-top: 40px;
-    display: flex;
     margin-left: 10px;
 }
 
@@ -33,6 +32,10 @@
 .litleBlock img:hover {
     transform: scale(1.1);
     cursor: pointer;
+}
+
+.bigBlock img {
+    height: 460px;
 }
 
 .bigBlock {

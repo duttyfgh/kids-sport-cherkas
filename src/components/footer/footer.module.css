@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
 
 .footer {
+    margin-top: 1px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,6 +13,7 @@
     background-color: #9dce4e;
     margin-top: 20px;
     font-size: 16px;
+    
 }
 
 .footer span a {
@@ -40,6 +42,10 @@
     margin-left: 5px;
 }
 
+.version {
+    text-decoration: none;
+    cursor: default;
+}
 
 @media (max-width: 330px) {
     .footer {

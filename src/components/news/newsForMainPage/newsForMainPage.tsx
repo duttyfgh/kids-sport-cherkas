@@ -43,8 +43,8 @@ const NewsForMainPage = () => {
         <div className={classes.lastActualNews}>
           <img src={lastActualNews.newsImg} alt="..." />
           <div className={classes.textBlock}>
-            <b>{lastActualNews.description}</b>
-            <p>news text</p>
+            <b>{lastActualNews.name}</b>
+            <p>{lastActualNews.litleDescription}</p>
             <span>
               <FontAwesomeIcon style={{ marginRight: '5px' }} icon={faClock} />
               {`${lastActualNews.date.dateNumber} ${lastActualNews.date.month}, ${lastActualNews.date.year}`}
@@ -66,7 +66,7 @@ const NewsForMainPage = () => {
                     <>
                       <img src={newsItem.newsImg} alt="..." />
                       <div className={classes.newsDesacitpion}>
-                        <b>{newsItem.description}</b>
+                        <b>{newsItem.name}</b>
                         <p>
                           <FontAwesomeIcon style={{ marginRight: '5px' }} icon={faClock} />
                           {`${newsItem.date.dateNumber} ${newsItem.date.month}, ${newsItem.date.year}`}

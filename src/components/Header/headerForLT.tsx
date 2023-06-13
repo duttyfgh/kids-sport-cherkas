@@ -10,7 +10,7 @@ const HeaderForLT = () => {
             <NavLink to='/cool-site-for-sasha'><img src={logo} /></NavLink>
 
             <div className={classes.vigets}>
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/kids-sport-cherkas'}>
+                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/main'}>
                     ГОЛОВНА
                 </NavLink>
 

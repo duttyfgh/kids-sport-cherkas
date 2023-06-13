@@ -27,7 +27,7 @@ const HeaderForTablet = () => {
             }
 
             {dropPonelIsActive && <div className={classes.dropPonel}>
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/cool-site-for-sasha'}>
+                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/main'}>
                     ГОЛОВНА
                 </NavLink>
 

@@ -1,0 +1,366 @@
+.editPage {
+    color: aliceblue;
+    
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.editPage p {
+    font-size: 30px;
+    color: aliceblue;
+
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.editPage input::placeholder {
+    color: rgb(216, 216, 216);
+}
+
+.editPage textarea {
+    border-radius: 8px;
+}
+
+.addPhoto {
+    width: 400px;
+    height: 400px;
+
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    margin-left: 20px;
+    box-shadow: 2px 2px 10px black;
+    background-color: white;
+}
+
+.addPhoto:hover {
+    background-color: #c2c2c2;
+} 
+
+.addPhoto * {
+    color: #282828;
+}
+
+.plusIcon {
+    font-size: 150px;
+}
+
+.dateBlock {
+    margin-left: 20px;
+}
+
+.dateBlock p {
+    font-size: 30px;
+    color: aliceblue;
+
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+}
+
+.date {
+    width: 30px;
+    height: 40px;
+    
+    font-size: 30px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.month {
+    width: 120px;
+    height: 40px;
+
+    font-size: 30px;
+    border-radius: 4px;
+
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.year {
+    
+    width: 60px;
+    height: 40px;
+    
+    font-size: 30px;
+    border-radius: 4px;
+
+    margin-left: 10px;
+    padding: 10px;
+}
+
+.date, .month, .year {
+    color: #282828;
+}
+
+.addTextBlok {
+
+    margin-left: 60px;
+}
+
+.addTextBlok p {
+    margin-left: 0;
+}
+
+.addName textarea {
+    width: 600px;
+    height: 60px;
+
+    padding: 5px 10px;
+    resize: none;
+
+    font-size: 20px;
+    color: #454545;
+    
+}
+
+.addName .sumvolsCounter, .addFullDes .sumvolsCounter {
+    color: #646961;
+    font-size: 20px;
+
+    width: 620px;
+    display: flex;
+
+}
+
+.addLitleDes textarea {
+    width: 800px;
+    height: 120px;
+    
+    font-size: 20px;
+    padding: 5px 10px;
+    resize: none;
+}
+
+.addLitleDes .sumvolsCounter {
+    color: #646961;
+    font-size: 20px;
+
+    width: 820px;
+    display: flex;
+  
+}
+
+.addFullDes textarea {
+    width: 800px;
+    height: 260px;
+    
+    font-size: 20px;
+    padding: 5px 10px;
+    resize: none;
+    
+}
+
+.save {
+    margin-top: 30px;
+    margin-left: 20px;
+
+    width: 220px;
+    height: 80px;
+
+    font-size: 30px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    background-color: #9dce4e;
+    box-shadow: 2px 2px 10px #222d11;
+}
+
+.save:hover {
+    background-color: #8ab544;
+}
+
+.photo {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.photo img {
+    height: 400px; 
+    border-radius: 12px;
+}
+
+.delitePhoto {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.delitePhoto span {
+    color:#c2c2c2;
+    font-size: 25px;
+}
+
+.deliteIcon *, .deliteIcon {
+    color:#c2c2c2;
+    font-size: 30px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.dropDownPanel {
+    width: 200px;
+    font-size: 30px;
+    color: #282828;
+    margin-left: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.addTypeNewsText {
+    margin-top: 20px;
+}
+
+@media (max-width: 1330px) {
+    .editPage {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .firstBlock {
+        display: flex;
+        margin-top: 20px;
+     }
+    .secondBlock {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .addTextBlok {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+@media (max-width: 920px) {
+    .addTextBlok {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+     }
+
+     .addLitleDes .sumvolsCounter {
+        width: 200px;
+     }
+
+    .addLitleDes textarea {
+        width: 600px;
+        font-size: 18px;
+
+    }
+
+    .addFullDes textarea {
+        width: 600px;
+        font-size: 18px;
+    }
+
+    .dateBlock {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .date, .month, .year {
+        margin: 5px 10px;
+    }
+}
+
+@media (max-width: 650px) {
+    .editPage p {
+        font-size: 24px;
+    }
+
+    .firstBlock {
+        display: flex;
+        flex-direction: column;
+    }
+    .dateBlock {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+    .addLitleDes textarea, .addFullDes textarea, .addName textarea {
+        width: 400px;
+        font-size: 18px;
+
+    }
+
+    .addName .sumvolsCounter {
+        width: 0;
+    }
+
+    .photo, .addPhoto {
+        height: 200px;
+        width: 300px;
+        margin-left: 5px;
+        margin-right: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .plusIcon {
+        font-size: 70px;
+    }
+
+    .dropDownPanel {
+        font-size: 20px;
+    }
+
+    .save {
+        font-size: 20px;
+        width: 150px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 440px) {
+    .addLitleDes textarea, .addFullDes textarea, .addName textarea {
+        width: 300px;
+        font-size: 18px;
+    }
+
+    .addName .sumvolsCounter {
+        width: 220px;
+    }
+
+    .date {
+        width: 25px;
+        height: 30px;
+        
+        font-size: 26px;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    
+    .month {
+        width: 90px;
+        height: 30px;
+    
+        font-size: 26px;
+        border-radius: 4px;
+    
+        margin-left: 10px;
+        padding: 10px;
+    }
+    
+    .year {
+        width: 52px;
+        height: 30px;
+        font-size: 26px;
+        margin-left: 5px;
+     }
+
+     .addTextBlok p {
+        margin-left: 20px;
+     }
+}

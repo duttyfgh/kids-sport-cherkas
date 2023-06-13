@@ -2,6 +2,7 @@ import { Navigate, Route, Routes } from 'react-router';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import AboutAs from './components/aboutAs/aboutAs';
+import AdminPage from './components/adminPage/adminPage';
 import Basketball from './components/basketball/basketball';
 import Football from './components/football/football';
 import Footer from './components/footer/footer';
@@ -11,28 +12,30 @@ import OutherTypes from './components/otherTypes/otherTypes';
 import PageNotFound from './components/pageNotFound/pageNotFound';
 import StartPage from './components/StartPage/StartPage';
 
+const basename = '/kids-sport-cherkas';
+
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <div className='main'>
         <Header />
         <div className='mainContent'>
-            <Routes>
-              <Route path='/' element={<Navigate to={'/kids-sport-cherkas'} />} />
-              <Route path='/kids-sport-cherkas' element={<StartPage />} />
-              <Route path='/news' element={<News />} />
-              <Route path='/football' element={<Football />} />
-              <Route path='/basketball' element={<Basketball />} />
-              <Route path='/outher' element={<OutherTypes />} />
-              <Route path='/about-as' element={<AboutAs />} />
-              <Route path='*' element={<PageNotFound />} />
-            </Routes>
+          <Routes>
+            <Route path='/' element={<Navigate to='/main' replace />} />
+            <Route path='/main' element={<StartPage />} />
+            <Route path='/news' element={<News />} />
+            <Route path='/football' element={<Football />} />
+            <Route path='/basketball' element={<Basketball />} />
+            <Route path='/outher' element={<OutherTypes />} />
+            <Route path='/about-as' element={<AboutAs />} />
+            <Route path='/admin-page' element={<AdminPage />} />
+            <Route path='*' element={<PageNotFound />} />
+          </Routes>
           <Footer />
         </div>
       </div>
     </BrowserRouter>
-
-  )
+  );
 }
 
 export default App;

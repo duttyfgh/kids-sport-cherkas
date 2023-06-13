@@ -1,0 +1,199 @@
+.authBlock {
+height: 560px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.authBlock form {
+    width: 500px;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    background-color: #9dce4e;
+
+    position: relative;
+
+    box-shadow: 2px 2px 20px black;
+    border-radius: 12px;
+}
+
+.authBlock h1 {
+    position: absolute;
+    top: 0;
+
+    margin-top: 10px;
+    color: #496121;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.authBlock h1::after {
+    content: '';
+
+    width: 450px;
+    height: 2px;
+
+    background-color: #496121;
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+.adminInput {
+    width: 420px;
+    height: 60px;
+
+    padding: 0 20px;
+
+    background-color: #9dce4e;
+    border-bottom: 1px solid #496121;
+
+    font-size: 25px;
+}
+
+.adminInput::placeholder {
+    color: #719635;
+}
+
+.authBlock button {
+    background-color: #496121;
+    color: #9dce4e;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px black;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+
+}
+
+.authBlock button:hover {
+    background-color: #425a1f;
+}
+
+.errorInput {
+    width: 420px;
+    height: 60px;
+
+    padding: 0 20px;
+
+    background-color: #9dce4e;
+    border-bottom: 1px solid #cf3e3e;
+
+    font-size: 25px;
+}
+
+.errorInput {
+    color: #cf3e3e;
+}
+
+.errorInput::placeholder {
+    color: #719635;
+}
+
+.errorMessage {
+    color: #cf3e3e;
+    font-size: 20px;
+}
+
+@media (max-width: 1511px) {
+    .newsLine span {
+        color: #cf3e3e;
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .redBlock {
+        width: 24px;
+        height: 24px;
+        background-color: #cf3e3e;
+    }
+
+    .greenLine {
+        width: 77%;
+        height: 24px;
+        background-color: #9dce4e;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1116px) {
+    .newsLine {
+
+        align-items: baseline;
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 560px) {
+    .authBlock form {
+        width: 300px;
+        height: 300px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+        background-color: #9dce4e;
+    
+        position: relative;
+    
+        box-shadow: 2px 2px 20px black;
+        border-radius: 12px;
+    }
+    .authBlock h1 {
+        position: absolute;
+        top: 0;
+    
+        margin-top: 10px;
+
+        font-size: 24px;
+        color: #496121;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .authBlock h1::after {
+        content: '';
+    
+        width: 250px;
+        height: 2px;
+    
+    }
+    
+    .adminInput {
+        width: 240px;
+        height: 60px;
+        padding: 0;
+        font-size: 20px;
+    }
+
+    .authBlock button {
+        width: 150px;
+        height: 50px;
+        font-size: 25px;
+    }
+
+    .errorInput {
+        width: 240px;
+        height: 60px;
+        padding: 0;
+        font-size: 20px;
+    }
+}

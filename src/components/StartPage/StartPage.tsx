@@ -6,24 +6,28 @@ import StartPagePC from './StartPagePC'
 
 interface NewsComponentProps {
     news: {
-        newsImg: string,
-        description: string,
+        newsImg: string;
+        name: string;
+        litleDescription: string;
+        fullDescription: string;
         date: {
-            dateNumber: number,
-            month: string,
-            year: number
+            dateNumber: string;
+            month: string;
+            year: string;
+        };
+        type: string | null
         }
     }
-}
+
 
 const NewsComponent = (props: NewsComponentProps) => {
-    const { newsImg, description, date: { dateNumber, month, year }, } = props.news
+    const { newsImg, name, date: { dateNumber, month, year }, } = props.news
 
     return (
         <div className={classes.actualFirst}>
             <img src={newsImg} alt="..." />
             <div className={classes.blockText}>
-                <span>{description}</span>
+                <span>{name}</span>
                 <span style={{fontSize: '14px'}}>{`${dateNumber} ${month} ${year}`}</span>
             </div>
         </div>
@@ -33,13 +37,13 @@ const NewsComponent = (props: NewsComponentProps) => {
 
 const StartPageLTAndTablet = () => {
     const { actualNews } = useAppSelector(state => state.actualNews)
-
+    console.log(actualNews)
     return (
         <div className={classes.actualNews}>
-            {actualNews.slice(0, 3).map(n => (
-                <NewsComponent news={n}/>
-            ))}
-        </div>
+        {actualNews.slice(2, 5).reverse().map(n => (
+            <NewsComponent news={n} key={n.newsImg} />
+        ))}
+    </div>
     )
 }
 
