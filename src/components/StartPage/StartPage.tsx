@@ -27,13 +27,12 @@ const NewsComponent = (props: NewsComponentProps) => {
         <div className={classes.actualFirst}>
             <img src={newsImg} alt="..." />
             <div className={classes.blockText}>
-                <span>{name}</span>
+                <textarea readOnly value={name}/>
                 <span style={{fontSize: '14px'}}>{`${dateNumber} ${month} ${year}`}</span>
             </div>
         </div>
     )
 }
-
 
 const StartPageLTAndTablet = () => {
     const { actualNews } = useAppSelector(state => state.actualNews)

@@ -9,7 +9,13 @@
     position: relative;
     margin-top: 10px;
     text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     overflow: hidden;
+
     width: 1000px;
     max-height: 200px;
 }
@@ -26,6 +32,7 @@
 
 .blockText {
     display: flex;
+    align-items: center;
     flex-direction: column;
     position: absolute;
     bottom: 10px;
@@ -36,6 +43,18 @@
     margin: 0;
     background-color: #00000024;
     cursor: pointer;
+ 
+}
+
+.blockText textarea {
+    text-align: center;
+    font-size: 18px;
+    width: 500px;
+    resize: none;
+    color: white;
+    background-color: transparent;
+    height: auto;
+
 }
 
 .blockText span {
@@ -44,10 +63,15 @@
 
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 520px) {
     .blockText span {
         color: white;
         font-size: 13px;
 
+    }
+    .blockText textarea {
+        width: 320px;
+        height: 70px;
+        padding: 5px;
     }
 }
