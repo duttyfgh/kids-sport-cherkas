@@ -17,7 +17,7 @@ const Footer = () => {
                 <a href="https://www.instagram.com/dutyfgh/" target={'_blank'}>
                     <FontAwesomeIcon icon={faInstagram} className={classes.inst} /></a></div>
             <Link to='/version' className={classes.version}>
-                0.9v
+                1.0v
             </Link>
         </footer>
 
