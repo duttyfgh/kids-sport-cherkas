@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { useAppSelector } from '../../hooks/redux'
 
 const HeaderForTablet = () => {
     const [dropPonelIsActive, setDropPonelIsActive] = useState(false)
@@ -15,49 +16,66 @@ const HeaderForTablet = () => {
         setDropPonelIsActive(false)
     }
 
+    const { isAdmin } = useAppSelector(state => state.admin)
+
     return (
         <header className={classes.header}>
-      <div className={classes.redLine}></div>
-            <NavLink to='/kids-sport-cherkas'><img src={logo} /></NavLink>
+            <div className={classes.redLine}></div>
+            <NavLink to='/main'><img src={logo} /></NavLink>
             {dropPonelIsActive
                 ? <div className={classes.burger}><span>МЕНЮ</span>
                     <FontAwesomeIcon onClick={unActiveteDropPonel} icon={faXmark} /></div>
-                : <div  className={classes.burger}><span>МЕНЮ</span>
+                : <div className={classes.burger}><span>МЕНЮ</span>
                     <FontAwesomeIcon onClick={activeteDropPonel} icon={faBars} /></div>
             }
 
             {dropPonelIsActive && <div className={classes.dropPonel}>
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/main'}>
+                <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/main'}>
                     ГОЛОВНА
                 </NavLink>
 
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/news'}>
+                <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/news'}>
                     НОВИНИ
                 </NavLink>
 
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/football'}>
+                <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/football'}>
                     ФУТБОЛ
                 </NavLink>
 
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/basketball'}>
+                <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/basketball'}>
                     БАСКЕТБОЛ
                 </NavLink>
 
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/outher'}>
+                <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/outher'}>
                     ІНШІ ВИДИ
                 </NavLink>
 
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/videos'}>
+                <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/videos'}>
                     ВІДЕО
                 </NavLink>
 
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/about-as'}>
+                <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/about-as'}>
                     ПРО НАС
                 </NavLink>
 
-                <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/contacts'}>
+                <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/contacts'}>
                     КОНТАКТИ
                 </NavLink>
+
+                {isAdmin && <NavLink onClick={unActiveteDropPonel} className={navData =>
+                    navData.isActive ? classes.active : classes.vigetsItem} to={'/admin'}>
+                    АДМІН
+                </NavLink>}
+
+
             </div>}
 
 

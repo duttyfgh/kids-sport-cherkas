@@ -36,7 +36,7 @@ const NewsComponent = (props: NewsComponentProps) => {
 
 const StartPageLTAndTablet = () => {
     const { actualNews } = useAppSelector(state => state.actualNews)
-    console.log(actualNews)
+  
     return (
         <div className={classes.actualNews}>
             {actualNews.slice(-3).reverse().map(n => (

@@ -35,6 +35,7 @@ const AuthAdmin = (props: AuthAdminProps) => {
         <div className={classes.authBlock}>
             <form>
                 <h1>Введіть адмін пароль</h1>
+                
                 <input
                     className={
                         error ? classes.errorInput : classes.adminInput
@@ -49,6 +50,7 @@ const AuthAdmin = (props: AuthAdminProps) => {
                         Incorrect admin password..
                     </div>
                 )}
+                <span>пароль: "1"</span>
                 <button onClick={onClickHandler}>Увійти</button>
             </form>
         </div>

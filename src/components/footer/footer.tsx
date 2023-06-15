@@ -16,7 +16,7 @@ const Footer = () => {
             <div className={classes.autorSite}>Цей сайт створено
                 <a href="https://www.instagram.com/dutyfgh/" target={'_blank'}>
                     <FontAwesomeIcon icon={faInstagram} className={classes.inst} /></a></div>
-            <Link to='/admin-page' className={classes.version}>
+            <Link to='/version' className={classes.version}>
                 0.9v
             </Link>
         </footer>

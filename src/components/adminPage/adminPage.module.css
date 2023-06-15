@@ -1,55 +1,67 @@
-.newsLine {
-    width: 100%;
+.pageChanges {
     display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 20px;
-    margin-top: 40px;
+    height: 63vh;
 }
 
-.redBlock {
-    width: 36px;
-    height: 36px;
-    background-color: #cf3e3e;
-}
+.addNews {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.greenLine {
-    width: 74%;
-    height: 36px;
+    width: 100px;
+    height: 100px;
+
+    margin-bottom: 20px;
+    margin-right: 20px;
+
     background-color: #9dce4e;
-    margin-left: 10px;
+    border: 3px dashed #4a6621;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px black;
 }
 
-.newsLine span {
-    color: #cf3e3e;
-    font-size: 38px;
-    margin-left: 10px;
+.addNews * {
+    font-size: 50px;
+    color: #59782a;
 }
 
-@media (max-width: 1514px) {
-    .greenLine {
-        height: 26px;
-    }
-    .redBlock {
-        height: 26px;
-        width: 26px;
+.logOut {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    }
+    width: 100px;
+    height: 100px;
+    
+    margin-bottom: 20px;
 
-    .newsLine span {
-        font-size: 26px;
-    }
+    background-color: #9dce4e;
+    border: 2px solid #4a6621;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px black;
 }
 
-@media (max-width: 1102px) {
-    .greenLine {
-        height: 22px;
-    }
-    .redBlock {
-        height: 22px;
-        width: 22px;
+.logOut * {
+    font-size: 50px;
+    color: #59782a;
+}
+
+.addNews:hover,
+.logOut:hover {
+    background-color: #94c348;
+}
+
+@media (max-width: 500px) {
+    .pageChanges {
+    flex-direction: column;
     }
 
-    .newsLine span {
-        font-size: 20px;
+    .addNews {
+    margin-right: 0;
+
     }
 }

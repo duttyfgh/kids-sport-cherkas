@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import AboutAs from './components/aboutAs/aboutAs';
 import AdminPage from './components/adminPage/adminPage';
+import EditSitePage from './components/adminPage/editSitePage/editSitePage';
 import Basketball from './components/basketball/basketball';
 import Football from './components/football/football';
 import Footer from './components/footer/footer';
@@ -11,6 +12,7 @@ import News from './components/news/news/news';
 import OutherTypes from './components/otherTypes/otherTypes';
 import PageNotFound from './components/pageNotFound/pageNotFound';
 import StartPage from './components/StartPage/StartPage';
+import VersionPage from './components/versionPage/versionPage';
 
 const basename = '/kids-sport-cherkas';
 
@@ -28,7 +30,9 @@ function App() {
             <Route path='/basketball' element={<Basketball />} />
             <Route path='/outher' element={<OutherTypes />} />
             <Route path='/about-as' element={<AboutAs />} />
-            <Route path='/admin-page' element={<AdminPage />} />
+            <Route path='/admin' element={<AdminPage />} />
+            <Route path='/version' element={<VersionPage />} />
+            <Route path='/add-news' element={<EditSitePage />} />
             <Route path='*' element={<PageNotFound />} />
           </Routes>
           <Footer />

@@ -52,10 +52,14 @@
 }
 
 .vigetsItem {
+
     text-decoration: none;
     font-size: 18px;
-    padding-top: 10px;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 10px;
+
     transition: 0.3s;
 }
 
@@ -66,10 +70,13 @@
 
 .active {
     text-decoration: none;
-    font-size: 18px;
-    padding-top: 10px;
-    padding-left: 10px;
     color: #2c3917;
+    font-size: 18px;
+    
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    
     background-color: #709632;
     transition: 0.3s;
 }

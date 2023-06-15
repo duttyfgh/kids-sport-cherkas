@@ -3,13 +3,21 @@ import { useEffect, useState } from "react"
 import { NavLink } from 'react-router-dom'
 import logo from '../../assets/images/big-logo.png'
 import HeaderForTablet from './headerForTablet'
-import HeaderForLT from './headerForLT'
+import { useAppSelector } from '../../hooks/redux'
 
 const HeaderForPC = () => {
+
+  const { isAdmin } = useAppSelector(state => state.admin)
+  let logoStyles = {}
+  if (isAdmin) logoStyles = {
+    marginRight: '0',
+    marginLeft: '0'
+  }
+
   return (
     <header className={classes.header}>
       <div className={classes.redLine}></div>
-      <NavLink to='/cool-site-for-sasha'><img src={logo} /></NavLink>
+      <NavLink to='/main'><img style={logoStyles} src={logo} /></NavLink>
 
       <div className={classes.vigets}>
         <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/main'}>ГОЛОВНА</NavLink>
@@ -20,6 +28,9 @@ const HeaderForPC = () => {
         <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/videos'}>ВІДЕО</NavLink>
         <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/about-as'}>ПРО НАС</NavLink>
         <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/contacts'}>КОНТАКТИ</NavLink>
+        {isAdmin &&
+          <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/admin'}>АДМІН</NavLink>}
+
       </div>
     </header>
   )
@@ -42,17 +53,9 @@ const Header = () => {
 
   let headerComponent
 
-  switch (true) {
-    case screenWidth > 1600:
-      headerComponent = <HeaderForPC />
-      break
-    case screenWidth > 1049:
-      headerComponent = <HeaderForLT />
-      break
-    default:
-      headerComponent = <HeaderForTablet />
-      break
-  }
+  if(screenWidth > 1160) headerComponent = <HeaderForPC />
+  else headerComponent = <HeaderForTablet />
+
 
   return (
     <div>

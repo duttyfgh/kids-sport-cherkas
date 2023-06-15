@@ -1,6 +1,7 @@
 import { faClock } from '@fortawesome/free-regular-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useNavigate } from 'react-router'
+import TopLine from '../../../common/topLine/topLine'
 import { useAppSelector } from '../../../hooks/redux'
 import classes from './newsForMainPage.module.css'
 
@@ -33,11 +34,7 @@ const NewsForMainPage = () => {
 
   return (
     <div className={classes.actualNews}>
-      <div className={classes.newsLine}>
-        <div className={classes.redBlock}></div>
-        <span>НОВИНИ</span>
-        <div className={classes.greenLine}></div>
-      </div>
+      <TopLine text={'новини'}/>
 
       <div>
         <div className={classes.lastActualNews}>

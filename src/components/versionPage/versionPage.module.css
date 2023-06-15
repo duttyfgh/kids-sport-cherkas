@@ -1,0 +1,164 @@
+.versionPage {
+    position: relative;     
+}
+
+.notActiveNav {
+    margin-top: 20px;
+
+    position: absolute;
+    left: 0;
+
+    height: 400px;
+    width: 25px;
+
+    background-color: #cf3e3e;
+    border-radius: 0 6px 6px 0;
+    transition: 0.5s;
+}
+
+.notActiveNav * {
+    display: none;
+}
+
+.activeNav {
+    margin-top: 20px;
+
+    position: absolute;
+    left: 0;
+
+    height: 400px;
+    width: 230px;
+
+    border-right: 25px solid #8f2727;
+    background-color: #cf3e3e;
+
+    border-radius: 0 6px 6px 0;
+    transition: 0.5s;
+}
+
+.activeNav * {
+    display: flex;
+    color: aliceblue;
+}
+
+.activeNav div {
+    color: aliceblue;
+    font-size: 21px;
+}
+
+.notActiveAnArrow {
+    font-size: 30px;
+    color: #751c1c;
+    position: absolute;
+    z-index: 999;
+    left: 5px;
+    top: 220px;
+    cursor: pointer;
+}
+
+.activeAnArrow {
+    font-size: 30px;
+    color: #cf3e3e;
+    position: absolute;
+    z-index: 999;
+    left: 235px;
+    top: 220px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.navItem {
+    margin-top: 10px;
+    align-items: center;
+    border-bottom: 1px solid #8f2727;
+    padding-bottom: 4px;
+    margin-left: 10px;
+
+}
+
+.navItem span {
+    margin-right: 10px;
+}
+
+.navItem a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.dropDownPonel {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropDownPonel div:nth-child(2) {
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 20px;
+
+}
+
+.dropDownPonel div:nth-child(2) * {
+    color: #d8dbdf;
+
+}
+
+.dropDownPonel span {
+    cursor: pointer;
+}
+
+.ponelText {
+    align-items: center;
+    cursor: pointer;
+}
+
+.currentVersion {
+    color: #cf3e3e;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 30px;
+}
+
+.pShell {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    margin-top: 20px;
+}
+
+.pShell div {
+    width: 300px;
+    margin-left: 40px;
+
+}
+
+.pShell p {
+    color: aliceblue;
+    margin-top: 10px;
+    font-size: 24px;
+    width: 300px;
+}
+
+.pShell span {
+    color: #cf3e3e;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+
+    .pShell p {
+        font-size: 18px;
+    }
+
+    .pShell span {
+        font-size: 20px;
+    }
+
+    .pShell {
+        flex-direction: column;
+        align-items: center;
+    }
+}
