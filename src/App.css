@@ -3,6 +3,7 @@
 * {
     color: #2c3917;
     font-family: 'Oswald', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
@@ -25,6 +26,10 @@ body::-webkit-scrollbar-track {
 /* Цвет самой прокрутки */
 body::-webkit-scrollbar-thumb {
     background-color: #9dce4e;
+}
+
+img {
+    object-fit: cover;
 }
 
 .main {

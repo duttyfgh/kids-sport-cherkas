@@ -1,10 +1,16 @@
 import { faSquarePlus, faTrashAlt } from '@fortawesome/free-regular-svg-icons'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { ChangeEvent, useState } from 'react'
 import { useActions } from '../../../hooks/actions'
 import classes from './editSitePage.module.css'
+import { format } from 'date-fns';
+import { uk } from 'date-fns/locale';
 
-const EditSitePage = () => {
+const EditSitePage: React.FC = () => {
+  //chekbox
+  const [toodayDate, setToodayDate] = useState(false)
+
   //photo and drop down panel
   const [photo, setPhoto] = useState<string>('')
   const [selectedValue, setSelectedValue] = useState<string>('')
@@ -36,7 +42,6 @@ const EditSitePage = () => {
     setPhoto('')
   }
 
-
   //textarea handlers
   const handleNameChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value
@@ -45,11 +50,11 @@ const EditSitePage = () => {
     }
     setName(value)
   }
-  
+
 
   const handleLitleDesChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value
-    if (value.length <= 300) {
+    if (value.length <= 185) {
       setLitleDesChars(value.length)
     }
     setLitleDes(value)
@@ -81,8 +86,8 @@ const EditSitePage = () => {
     setYear(e.target.value)
   }
 
-  //to collect terminal arrey
 
+  //to collect terminal arrey
   interface terminalArrey {
     newsImg: string;
     name: string;
@@ -94,6 +99,7 @@ const EditSitePage = () => {
       year: string;
     };
     type: string;
+    id: number
   }
 
   const arreyToCollectHandler = (): terminalArrey => {
@@ -108,13 +114,12 @@ const EditSitePage = () => {
         year,
       },
       type: selectedValue,
+      id: 5
     };
   };
 
-
-
   const addNewsHandler = () => {
-    const newsData:terminalArrey = arreyToCollectHandler();
+    const newsData: terminalArrey = arreyToCollectHandler();
     addNews(newsData);
     setPhoto('')
     setName('')
@@ -125,6 +130,30 @@ const EditSitePage = () => {
     setYear('')
     setSelectedValue('')
   };
+  //date
+  const activateCheckboxHandler = () => {
+    setToodayDate(true)
+    setDay(dayElement)
+    setMonth(monthElement)
+    setYear(yearElement)
+  }
+
+  const disActivateCheckboxHandler = () => {
+    setToodayDate(false)
+    setDay('')
+    setMonth('')
+    setYear('')
+  }
+
+  const currentDate = new Date();
+
+  const formattedDate = format(currentDate, 'dd MMMM yyyy', { locale: uk });
+
+  const dateParts = formattedDate.split(' ');
+  const dayElement = dateParts[0]; // "18"
+  const monthElement = dateParts[1]; // "червня"
+  const yearElement = dateParts[2]; // "2023"
+
 
   return (
     <div className={classes.editPage}>
@@ -157,10 +186,17 @@ const EditSitePage = () => {
         <div className={classes.secondBlock}>
           <div className={classes.dateBlock}>
             <p>Додати дату: </p>
+            <div className={classes.toodayDate}>
+              <span>Сьогоднішня дата</span>
+              {toodayDate
+                ? <div className={classes.chacked} onClick={disActivateCheckboxHandler}><FontAwesomeIcon icon={faCheck} /></div>
+                : <div className={classes.notChacked} onClick={activateCheckboxHandler}></div>
+              }
+            </div>
             <div>
               <input
                 title="Додати день, прклад(02)"
-                placeholder="02"
+                placeholder={dayElement}
                 className={classes.date}
                 type="text"
                 maxLength={2}
@@ -169,7 +205,7 @@ const EditSitePage = () => {
               />
               <input
                 title="Додати місяць, прклад(червень)"
-                placeholder="червень"
+                placeholder={monthElement}
                 className={classes.month}
                 type="text"
                 maxLength={9}
@@ -178,7 +214,7 @@ const EditSitePage = () => {
               />
               <input
                 title="Додати рік, прклад(2023)"
-                placeholder="2023"
+                placeholder={yearElement}
                 className={classes.year}
                 type="text"
                 maxLength={4}
@@ -214,8 +250,8 @@ const EditSitePage = () => {
 
         <div className={classes.addLitleDes} title="Додати короткий опис, опис який буде показуватись на сторінках: головна, баскетбол и тд.">
           <p>Додати короткий опис:</p>
-          <textarea onChange={handleLitleDesChange} value={letleDes} maxLength={300} />
-          <p className={classes.sumvolsCounter}>Символів: {litleDesChars}/300</p>
+          <textarea onChange={handleLitleDesChange} value={letleDes} maxLength={185} />
+          <p className={classes.sumvolsCounter}>Символів: {litleDesChars}/185</p>
         </div>
 
         <div className={classes.addFullDes} title="Повний опис який буде показуватись при клікі на новину и буде видкриватися повне окно новини.">

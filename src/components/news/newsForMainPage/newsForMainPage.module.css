@@ -83,7 +83,6 @@
 .newsItem {
     display: flex;
     align-items: start;
-    margin-left: 10px;
 }
 
 .newsItem img {
@@ -186,3 +185,10 @@
     }
 }
 
+@media (max-width: 360px) { 
+    .newsDesacitpion b {
+        font-size: 14px;
+        width: 280px;
+    }
+
+}
