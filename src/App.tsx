@@ -24,7 +24,7 @@ function App() {
         <div className='mainContent'>
           <Routes>
             {/*<Route path='/' element={<Navigate to='/kids-sport-cherkas' replace />} />*/}
-            <Route path='/main' element={<StartPage />} />
+            <Route path='/' element={<StartPage />} />
             <Route path='/news' element={<News />} />
             <Route path='/football' element={<Football />} />
             <Route path='/basketball' element={<Basketball />} />
