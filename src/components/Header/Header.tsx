@@ -20,7 +20,7 @@ const HeaderForPC = () => {
       <NavLink to='/main'><img style={logoStyles} src={logo} /></NavLink>
 
       <div className={classes.vigets}>
-        <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/main'}>ГОЛОВНА</NavLink>
+        <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/'}>ГОЛОВНА</NavLink>
         <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/news'}>НОВИНИ</NavLink>
         <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/football'}>ФУТБОЛ</NavLink>
         <NavLink className={navData => navData.isActive ? classes.active : classes.vigetsItem} to={'/basketball'}>БАСКЕТБОЛ</NavLink>
