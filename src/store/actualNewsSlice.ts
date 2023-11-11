@@ -34,7 +34,7 @@ const initialState: ActialNewsState = {
             id: 1
         },
         {
-            newsImg: 'https://www.poglyad.tv/wp-content/uploads/2020/04/29_vozduh3.jpg',
+            newsImg: 'https://kesq.b-cdn.net/2022/03/hypatia-h_a849d4ff1ac5c5cc9f8dae1e4c39f546-h_3a1cbccfee790fc4cce3993cbc802dc7-300.jpg',
             name: 'У системі адміністративно-територіального устрою України Київ має спеціальний статус..',
             litleDescription: 'Ки́їв (МФА: [ˈkɪjiu̯] ( прослухати), англ. Kyiv [ˈkiːɪv]) — столиця та найбільше місто України. Розташований у середній течії Дніпра, у північній Наддніпрянщині. Політичний...',
             fullDescription: 'full description',
